@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDN - Loops 1</title>
+</head>
+
+<body>
+    <button onclick="addToList()">Click to list the items</button>
+    <section class="preview">
+
+
+
+    </section>
+
+</body>
+<script>
+    const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+    const list = document.createElement('ul');
+
+    // forEach loop. Not recommended
+    // function addToList(item) {
+    //     myArray.forEach(item => {
+    //     const li = document.createElement('li');
+    //     li.textContent = item;
+    //     list.appendChild(li);
+    // });
+    // }
+    function addToList() {
+        for (let i = 0; i < myArray.length; i++) {
+            const item = [i];
+            const li = document.createElement('li');
+            li.textContent = item;
+            list.appendChild(li);
+        }
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    section.appendChild(list);
+</script>
+</body>
+
+</html>
